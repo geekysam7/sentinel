@@ -11,10 +11,8 @@ const AggregationView = ({ data }: { data: TSessionHistoryAggregation }) => {
             key={label}
             className="border border-gray-800 bg-bgCardSecondary rounded-md p-4 pb-8 flex flex-col items-stretch h-full"
           >
-            <div className="flex justify-between items-center w-full">
-              <div className="text-sm text-textSecondary break-words">
-                {label}
-              </div>
+            <div className="flex justify-between items-start w-full h-12 break-words">
+              <div className="text-sm text-textSecondary pr-2">{label}</div>
               <div
                 className={`text-xs ${
                   indicatorType === SESSION_INDICATOR_TYPE.INC
