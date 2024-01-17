@@ -19,14 +19,14 @@ const Sidebar = () => {
       <div className="flex flex-col w-full">
         <div className="flex flex-col text-textSecondary">
           <div className="flex items-center p-3 border-b border-gray-800">
-            <div className="w-22">IP Address</div>
+            <div className="w-24">IP Address</div>
             <div className="px-4">:</div>
             <div className="flex justify-start text-textPrimary">
               136.251.15.107
             </div>
           </div>
           <div className="flex items-center p-3 border-b border-gray-800">
-            <div className="w-22">Country</div>
+            <div className="w-24">Country</div>
             <div className="px-4">:</div>
             <div className="flex justify-start text-textPrimary">USA</div>
           </div>
