@@ -9,4 +9,4 @@
 ## Changes after timeline
 
 - Added background gradient :)
-- Word break for card: 
+- Word break for card
