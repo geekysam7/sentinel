@@ -10,8 +10,8 @@ import { format } from "date-fns";
 
 import { TNodes } from "@/types/general";
 import { SESSION_HISTORY_COLUMNS } from "@/constants/sessonHistory";
-import { NODE_VS_CONFIG } from "@/constants/general";
 import { TTSessionHistory } from "@/types/sessionHistory";
+import NodeUsedItem from "./NodeUsedItem";
 
 type TSessionTable = {
   startTime: number;
@@ -41,14 +41,7 @@ const columns = [
   columnHelper.accessor("node", {
     cell: (info) => {
       const nodeValue = info.getValue();
-      const nodeClassName = NODE_VS_CONFIG[nodeValue];
-      return (
-        <div
-          className={`p-1 w-20 flex justify-center items-center text-ellipsis rounded-sm ${nodeClassName}`}
-        >
-          {nodeValue}
-        </div>
-      );
+      return <NodeUsedItem value={nodeValue} />;
     },
     size: 250,
   }),
