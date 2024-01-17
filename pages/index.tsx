@@ -32,7 +32,7 @@ export default function Home() {
       className={`w-screen min-h-screen bg-mainBg text-white flex flex-col items-center p-10 ${chakraPetch.className}`}
     >
       <Heading />
-      <div className="w-full flex flex-col xl:flex-row">
+      <div className="w-full flex flex-col xl:flex-row justify-between">
         {isFetching ? (
           <Loader />
         ) : (
