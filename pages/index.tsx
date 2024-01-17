@@ -6,6 +6,7 @@ import AggregationView from "@/components/instance/AggregationView";
 import VerticalBarChart from "@/components/instance/VerticalBarChart";
 import SessionTable from "@/components/instance/SessionTable";
 import Sidebar from "@/components/instance/Sidebar";
+import Loader from "@/components/Loader";
 
 const chakraPetch = Chakra_Petch({
   weight: ["300", "400", "500", "600"],
@@ -33,7 +34,7 @@ export default function Home() {
       <Heading />
       <div className="w-full flex flex-col xl:flex-row">
         {isFetching ? (
-          <div>Loading..</div>
+          <Loader />
         ) : (
           <>
             <div>
