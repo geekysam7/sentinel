@@ -40,7 +40,7 @@ export default function Home() {
             <div>
               <Sidebar />
             </div>
-            <div className="flex flex-col overflow-scroll">
+            <div className="flex flex-col overflow-scroll bgRadialGradient">
               <AggregationView data={data.aggregation} />
               <VerticalBarChart data={data.activityChart} />
               <SessionTable data={data.history} />
