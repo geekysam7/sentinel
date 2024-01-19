@@ -9,7 +9,7 @@ const Heading = () => {
   return (
     <div className="w-full flex justify-between items-center h-24 border-b border-gray-800 pb-4">
       <div className="h-full flex items-center text-xl md:text-3xl">
-        <FontAwesomeIcon icon={faArrowLeft} />
+        <FontAwesomeIcon icon={faArrowLeft} className="text-textSecondary" />
         <h1 className="flex ml-8">Instance Name</h1>
       </div>
       <div className="flex items-center text-xl md:text-3xl">
