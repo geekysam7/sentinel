@@ -51,7 +51,7 @@ const columns = [
   }),
   columnHelper.accessor("location", {
     cell: (info) => info.getValue(),
-    size: 150,
+    size: 250,
   }),
 ];
 
@@ -80,15 +80,15 @@ const SessionTable = ({ data }: { data: TTSessionHistory }) => {
         <h2 className="text-3xl">Session History</h2>
       </div>
       <div className="w-full min-w-[700px] overflow-x-auto">
-        <table className="border-separate border-spacing-4 w-full">
-          <thead>
+        <table className="border-separate border-spacing-y-4 w-full">
+          <thead className="bg-bgCardTertiary">
             {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
+              <tr key={headerGroup.id} className="px-4">
                 {headerGroup.headers.map((header) => (
                   <th
                     key={header.id}
                     align="left"
-                    className="text-gray-400 font-semibold text-sm"
+                    className="text-gray-400 font-semibold text-sm p-4 py-2"
                     style={{ position: "relative", width: header.getSize() }}
                   >
                     {header.isPlaceholder
@@ -105,7 +105,7 @@ const SessionTable = ({ data }: { data: TTSessionHistory }) => {
                 {row.getVisibleCells().map((cell) => (
                   <td
                     key={cell.id}
-                    className={`text-sm text-textSecondary`}
+                    className={`text-sm text-textSecondary px-4`}
                     style={{ width: cell.column.getSize() }}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
